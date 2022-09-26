@@ -23,18 +23,14 @@ Server is a multi-threaded server that can start various conversation threads wh
 
 ## What are your strengths and weaknesses?  
 
-My strengths are that I am a quick learner and I am able to adapt to new technologies and frameworks very quickly, this is quite confident from the fact that even though my core language is Java, I started working on the signalling server which I built using Go which I just started learning but don't have much expertise in. I am also a team player and I am able to work well with others.
+My strengths are that I am a quick learner and I am able to adapt to new technologies and frameworks very quickly, this is quite evident from the fact that even though my core language is Java, I started working on the signalling server which I built using Go which I just started learning but don't have much expertise in. I am also a team player and I am able to work well with others.
 
 My weaknesses are that I tend to lose the tenacity to work when I'm working alone, however as soon as I'm working with a team I am able to work with full tenacity.
 
 ## Why should we hire you?
 
-I believe that I am a good fit for this position because I am a quick learner and I am able to adapt to new technologies and frameworks very quickly, this is quite confident from the fact that even though my core language is Java, I started working on the signalling server which I built using Go which I just started learning but don't have much expertise in. I am also a team player and I am able to work well with others.
-
-## What are your hobbies?
-
-I love to play video games, I am a huge fan of the Assassin's Creed series and I also love to play games like GTA V, Minecraft, etc. I also love to play the guitar and I am a huge fan of the rock genre. I also love to read books and I am currently reading the book "The Alchemist" by Paulo Coelho.
+I believe that I am a good fit for this position because I am a quick learner and I am able to adapt to new technologies and frameworks very quickly, this is quite evident from the fact that even though my core language is Java, I started working on the signalling server which I built using Go which I just started learning but don't have much expertise in. I am also a team player and I am able to work well with others.
 
 ## Where do you see yourself in 5 years?
 
-I see myself as a full stack developer working on a project that I am passionate about. I also see myself as a team lead or a project manager in a company that I am working for.
+I see myself as a full stack developer working on a project at `XYZ Company` that I am passionate about. I also see myself as a team lead or a project manager in `XYZ Company`.
