@@ -27,6 +27,8 @@ My strengths are that I am a quick learner and I am able to adapt to new technol
 
 My weaknesses are that I tend to lose the tenacity to work when I'm working alone, however as soon as I'm working with a team I am able to work with full tenacity.
 
+Another one of my weaknesses is that once I take up a problem, I tend to get so deep into solving that problem that even during my sleep I try to work it out and which is good in a way and I'm trying my best to overcome it.
+
 ## Why should we hire you?
 
 I believe that I am a good fit for this position because I am a quick learner and I am able to adapt to new technologies and frameworks very quickly, this is quite evident from the fact that even though my core language is Java, I started working on the signalling server which I built using Go which I just started learning but don't have much expertise in. I am also a team player and I am able to work well with others.
