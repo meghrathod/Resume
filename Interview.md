@@ -2,7 +2,7 @@
 
 ## Introduce yourself
 
-Good afternoon, my name is Megh Rathod and I am a third year Computer Science and Engineering student at Shiv Nadar University. I am a full stack developer with some experience using Python, Golang, C++, but I majorly use Java and JavaScript for my projects depending on the application. I am also an active community member of Google Developer Student Club which I lead last year as its deputy lead and this year as the advisor.
+Good afternoon, my name is Megh Rathod and I am a third year Computer Science and Engineering student at Shiv Nadar University. I am a full stack developer with some experience using Python and C++, but I majorly use Java and JavaScript for my projects depending on the application. I am also an active community member of Google Developer Student Club which I lead last year as its deputy lead and this year as the advisor. Currently I am also working on a research project with one of my professors on 5G technology.
 
 ## Talking about your projects
 
