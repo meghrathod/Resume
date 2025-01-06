@@ -1,0 +1,22 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "Serving dynamic resumes",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meghrathod/Resume.git"
+  },
+  "author": "Megh Rathod",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/meghrathod/Resume/issues"
+  },
+  "homepage": "https://resume.meghrathod.dev",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
