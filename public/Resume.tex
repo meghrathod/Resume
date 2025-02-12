@@ -1,0 +1,207 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\setlength{\footskip}{4.08003pt}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-5pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+
+\begin{center}
+    \textbf{\Huge \scshape Megh Rathod} \\ \vspace{1pt}
+    \small +1 (929) 969-0168 $|$ \href{mailto:msr.megh@gmail.com}{\underline{msr.megh@gmail.com}} $|$ 
+    \href{https://linkedin.com/in/meghrathod}{\underline{linkedin.com/in/meghrathod}} $|$
+    \href{https://github.com/meghrathod}{\underline{github.com/meghrathod}}
+\end{center}
+
+%-----------SUMMARY-----------
+\section{Summary}
+  Full-stack software developer with experience building scalable backend systems using Spring Boot microservices, Golang, and Node.js, alongside dynamic frontends in React and Angular. Proficient in deploying and maintaining cloud-native applications with CI/CD pipelines, containerization, and modern DevOps practices.
+  
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+        \begin{tabbing}
+        \hspace{3cm} \= \hspace{5cm} \= \kill % Set the tab stops
+        \textbf{Languages:} \> Java, Python, C/C++, JavaScript, SQL (MySQL, PostgreSQL) \\
+        \textbf{Frameworks:} \> Spring Boot, React, Angular, Node.js \\
+        \textbf{Tools:} \> Kubernetes, Docker, Git, Cloud Foundry, Snyk, Dynatrace, Linux
+        \end{tabbing}
+    }}
+\end{itemize}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Software Engineer}{May 2023 -- May 2024}
+      {Dell Technologies}{Bengaluru, India}
+      \resumeItemListStart
+      \resumeItem{
+        \textbf{Secured Microservices:} Implemented OAuth2 authentication with JWT in microservices for Quote Deal Planning (QDP), a cloud-native Java application in Dell's digital supply chain, ensuring secure access.
+      }
+      \resumeItem{
+        \textbf{Increased DevOps Efficiency:} Strengthened application security by addressing vulnerabilities in Angular and Spring Boot, optimized CI/CD pipelines, and achieving an internal DevOps maturity score of over 90\%.
+        }
+    \resumeItem{
+        \textbf{Developed a feature-rich frontend} in Angular and React to provide deal planners with critical data, integrating seamlessly with new microservices for real-time insights and improved decision-making.
+    }   
+	
+      \resumeItemListEnd
+
+
+    \resumeSubheading
+      {Teaching Assistant}{Jan 2023 -- April 2023}
+      {Shiv Nadar University}{Delhi-NCR, India}
+      \resumeItemListStart
+        \resumeItem{Supported the professor in preparing and conducting lectures, 12 graded assignments and 2 exams for the \textbf{Operating Systems class}, while hosting lab sessions and assisting 130 students with complex OS concepts.}
+        \resumeItem{Developed a \textbf{Python-based assignment grading framework} to automate and streamline grading for 12 assignments, improving grading efficiency by \textbf{30\%} and reducing manual errors for over \textbf{130 students}.}
+      \resumeItemListEnd
+    
+
+  \resumeSubHeadingListEnd
+
+  \section{Publication}
+    \resumeSubHeadingListStart
+      \resumeSubheading
+          {\textbf{Journal: Evaluating Conditional handover (CHO) for 5G networks with dynamic obstacles}} {}
+          {\href{https://doi.org/10.1016/j.comcom.2025.108067}{https://doi.org/10.1016/j.comcom.2025.108067}}{}
+          \resumeItemListStart
+            \resumeItem{Proposed and validated a Markov model to evaluate handover performance in 5G systems, focusing on CHO metrics like latency, packet loss, and failure probability using Python-based simulation setup to calculate optimal configuration of mobility parameters. }
+          \resumeItemListEnd
+          
+        \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {New York University}{New York, USA}
+      {Master of Science in Computer Engineering}{Sep. 2024 -- May 2026}
+    \resumeSubheading
+      {Shiv Nadar University}{Delhi-NCR, India}
+      {Bachelor of Technology in Computer Science and Engineering}{Aug. 2020 -- May 2024}
+
+  \resumeSubHeadingListEnd
+  
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Kabootar} $|$ \emph{React, TypeScript, Golang, Docker $|$ Peer-to-Peer File Sharing | \href{https://kabootar.meghrathod.dev/}{kabootar.meghrathod.dev}}}{}
+          \resumeItemListStart
+            \resumeItem{Developed a \textbf{peer-to-peer file sharing web app (PWA) using React and WebRTC}, enabling direct file transfers without server storage, reaching 200+ monthly active users in the university community}
+            \resumeItem{ Created a lightweight \textbf{signaling server in Golang using WebSockets} to handle peer discovery and connection management, resulting in reliable peer-to-peer file sharing between users}
+            
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Shorty} $|$ \emph{ React, Golang, PostgreSQL $|$ URL Shortener with Analytics | \href{https://sh.meghrathod.dev}{sh.meghrathod.dev}}}{}
+          \resumeItemListStart
+            \resumeItem{Implemented a \textbf{URL shortening service with integrated analytics}, providing detailed insights on user interactions, including access time, user agent, IP address, location, and country.}
+            \resumeItem{Deployed a robust GeoIP database update mechanism using \textbf{Docker and cron jobs}, ensuring accurate and up-to-date geolocation data for enhanced analytics and reporting.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+
+
+
+%-------------------------------------------
+
+
+\end{document}
