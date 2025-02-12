@@ -24,3 +24,11 @@ logs
 
 # Environment variables
 .env*
+
+*.aux
+*.fdb_latexmk
+*.fls
+*.out
+*.synctex.gz
+
+.DS_Store
