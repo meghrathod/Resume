@@ -11,21 +11,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up TeX Live
+      - name: Build PDF with TeX Live
         uses: xu-cheng/texlive-action@v2
         with:
-          packages: >-
-            latexmk
-            xelatex
-            fontspec
-            babel-english
-            collection-fontsrecommended
-            collection-latexextra
-
-      - name: Build PDF
-        run: |
-          cd public
-          latexmk -pdf -xelatex -interaction=nonstopmode Resume.tex
+          run: |
+            tlmgr install latexmk xelatex fontspec babel-english collection-fontsrecommended collection-latexextra
+            cd public
+            latexmk -pdf -xelatex -interaction=nonstopmode Resume.tex
 
       - name: Upload PDF to GitHub Release (latest)
         uses: softprops/action-gh-release@v2
