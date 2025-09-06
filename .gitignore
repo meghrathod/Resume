@@ -1,3 +1,5 @@
+# Ignore generated PDF
+public/Resume.pdf
 # Node.js
 node_modules/
 

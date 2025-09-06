@@ -1,0 +1,38 @@
+name: Build Resume PDF
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up TeX Live
+        uses: teatimeguest/setup-texlive-action@v2
+        with:
+          packages: >-
+            latexmk
+            xelatex
+            fontspec
+            babel-english
+            collection-fontsrecommended
+            collection-latexextra
+
+      - name: Build PDF
+        run: |
+          cd public
+          latexmk -pdf -xelatex -interaction=nonstopmode Resume.tex
+
+      - name: Upload PDF to GitHub Release (latest)
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: latest
+          name: Resume PDF
+          files: public/Resume.pdf
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
