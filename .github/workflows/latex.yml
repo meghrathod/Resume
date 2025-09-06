@@ -15,7 +15,7 @@ jobs:
         uses: xu-cheng/texlive-action@v2
         with:
           run: |
-            tlmgr install latexmk xelatex fontspec babel-english collection-fontsrecommended collection-latexextra
+            tlmgr install latexmk xelatex fontspec babel-english collection-fontsrecommended collection-latexextra rainbowbrackets tablericons tikz-shields tikzbrickfigurines
             cd public
             latexmk -pdf -xelatex -interaction=nonstopmode Resume.tex
 
