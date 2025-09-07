@@ -1,3 +1,12 @@
+// Ensure fetch is available (Node.js 18+ has global fetch, otherwise use node-fetch)
+let fetchFn;
+try {
+  fetchFn = fetch;
+} catch (e) {
+  fetchFn = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
+}
+
+
 const express = require('express');
 const path = require('path');
 
@@ -7,23 +16,34 @@ const PORT = process.env.PORT || 3000;
 // Serve static files from the 'public' directory
 app.use(express.static(path.join(__dirname, 'public')));
 
-
-// Route to serve the main page
-app.get(['/', '/on-campus'], (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
-});
-
 // Route to proxy the latest resume PDF from GitHub Releases
 app.get('/resume.pdf', async (req, res) => {
-  const pdfUrl = 'https://github.com/meghrathod/resume/releases/latest/download/Resume.pdf';
+  const pdfUrl = 'https://github.com/meghrathod/Resume/releases/download/latest/Resume.pdf';
   try {
-    const response = await fetch(pdfUrl);
+    const response = await fetchFn(pdfUrl, {
+      headers: { 'User-Agent': 'Mozilla/5.0 (compatible; ResumeProxy/1.0)' }
+    });
+    console.log('Fetch response status:', response.status);
     if (!response.ok) {
+      console.error('Failed to fetch PDF:', response.status, response.statusText);
       return res.status(502).send('Failed to fetch PDF');
     }
     res.setHeader('Content-Type', 'application/pdf');
-    response.body.pipe(res);
+    // Forward content-length and accept-ranges if available
+    if (response.headers.get('content-length')) {
+      res.setHeader('Content-Length', response.headers.get('content-length'));
+    }
+    if (response.headers.get('accept-ranges')) {
+      res.setHeader('Accept-Ranges', response.headers.get('accept-ranges'));
+    }
+    if (response.body && typeof response.body.pipe === 'function') {
+      response.body.pipe(res);
+    } else {
+      const buffer = await response.buffer();
+      res.end(buffer);
+    }
   } catch (err) {
+    console.error('Proxy error:', err);
     res.status(500).send('Error fetching PDF');
   }
 });

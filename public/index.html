@@ -13,19 +13,10 @@
     <iframe id="pdf-js-viewer" title="webviewer" frameborder="0"
         style="overflow: hidden; height: 100vh; width: 100%; display: block"></iframe>
     <script>
-        const path = window.location.pathname;
-        console.log("Current path:", path);
-
-        let pdfFile = '/Resume.pdf';
-        if (path === '/on-campus') {
-            pdfFile = '/resume-on-campus.pdf';
-        }
-        console.log("Selected PDF file:", pdfFile);
-
-        const viewerUrl = '/web/viewer.html?file=' + encodeURIComponent(pdfFile) + '#pagemode=none';
-        console.log("Viewer URL:", viewerUrl);
-
-        document.getElementById('pdf-js-viewer').src = viewerUrl;
+    // Use the local proxy endpoint to avoid cross-origin issues
+    const pdfUrl = '/resume.pdf';
+    const viewerUrl = '/web/viewer.html?file=' + encodeURIComponent(pdfUrl) + '#pagemode=none';
+    document.getElementById('pdf-js-viewer').src = viewerUrl;
     </script>
 </body>
 
