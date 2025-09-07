@@ -39,8 +39,9 @@ app.get('/resume.pdf', async (req, res) => {
     if (response.body && typeof response.body.pipe === 'function') {
       response.body.pipe(res);
     } else {
-      const buffer = await response.buffer();
-      res.end(buffer);
+      // For native fetch, use arrayBuffer and convert to Buffer
+      const arrayBuffer = await response.arrayBuffer();
+      res.end(Buffer.from(arrayBuffer));
     }
   } catch (err) {
     console.error('Proxy error:', err);

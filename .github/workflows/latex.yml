@@ -16,7 +16,6 @@ jobs:
         with:
           run: |
             tlmgr install latexmk xetex fontspec babel-english collection-fontsrecommended collection-latexextra rainbowbrackets tablericons tikz-shields tikzbrickfigurines
-            cd public
             latexmk -pdf -xelatex -interaction=nonstopmode Resume.tex
 
       - name: Upload PDF to GitHub Release (latest)
