@@ -11,7 +11,7 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
-\input{glyphtounicode}
+% \input{glyphtounicode}
 
 
 %----------FONT OPTIONS----------
@@ -29,7 +29,7 @@
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
 \fancyfoot{}
-\setlength{\footskip}{4.08003pt}
+\setlength{\footskip}{2pt}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
@@ -48,11 +48,11 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-5pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+  \vspace{-8pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-8pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
-\pdfgentounicode=1
+% \pdfgentounicode=1
 
 %-------------------------
 % Custom commands
@@ -67,21 +67,21 @@
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}\vspace{-6pt}
 }
 
 \newcommand{\resumeSubSubheading}[2]{
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}\vspace{-10pt}
 }
 
 \newcommand{\resumeProjectHeading}[2]{
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \small#1 & #2 \\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}\vspace{-10pt}
 }
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
@@ -91,13 +91,15 @@
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-8pt}}
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \begin{document}
+\setlength{\parskip}{0pt}
+\setlength{\itemsep}{0pt}
 
 
 \begin{center}
@@ -107,11 +109,6 @@
     \href{https://github.com/meghrathod}{\underline{github.com/meghrathod}}
 \end{center}
 
-%-----------SUMMARY-----------
-\section{Summary}
-  Full-stack software developer with experience building scalable backend systems using Spring Boot microservices, Golang, and Node.js, alongside dynamic frontends in React and Angular. Proficient in deploying and maintaining cloud-native applications with CI/CD pipelines, containerization, and modern DevOps practices.
-  
-%
 %-----------PROGRAMMING SKILLS-----------
 \section{Skills}
 \begin{itemize}[leftmargin=0.15in, label={}]
@@ -120,10 +117,22 @@
         \hspace{2.5cm} \= \hspace{5cm} \= \kill % Set the tab stops
         \textbf{Languages:} \> Java, Python, Golang, JavaScript, SQL (MySQL, PostgreSQL) \\
         \textbf{Frameworks:} \> Spring Boot, React, Angular, Node.js, GraphQL, React Native, LangGraph \\
-        \textbf{Tools:} \> Kubernetes, Docker, Git, Cloud Foundry, Snyk, Dynatrace, Linux
+        \textbf{Tools:} \> AWS, Kubernetes, Docker, Git, Cloud Foundry, Snyk, Dynatrace, Linux
         \end{tabbing}
     }}
 \end{itemize}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {New York University}{New York, USA}
+      {Master of Science in Computer Engineering $|$ GPA: \textbf{3.9}}{Sep. 2024 -- May 2026}
+    \resumeSubheading
+      {Shiv Nadar University}{Delhi-NCR, India}
+      {Bachelor of Technology in Computer Science and Engineering $|$ GPA: \textbf{3.8}}{Aug. 2020 -- May 2024}
+
+  \resumeSubHeadingListEnd
 
 %-----------EXPERIENCE-----------
 \section{Experience}
@@ -132,51 +141,33 @@
     {Software Engineer Intern}{May 2025 -- August 2025}
     {Exiger}{New York, NY}
     \resumeItemListStart
-      \resumeItem{Developed \textbf{automated test suites in TypeScript} to monitor and validate functionality and data accuracy of Exiger’s DDIQ Analytics dashboards, improving dashboard reliability and enabling early detection of data issues.}
-      \resumeItem{Prototyped a \textbf{LangGraph‑based agentic Bill of Materials (BoM) generator}, including a reflective “critique agent” that analyzed and improved the generated BoMs, showcasing innovation in AI-driven content production.}
+      \resumeItem{\textbf{Automated Dashboard Validation:} Developed test suites in \textbf{TypeScript} to monitor and validate Exiger’s \textbf{DDIQ Analytics dashboards}, eliminating a daily \textbf{30-minute manual validation task} performed by the Head of Production Support. Implemented proactive alerts that flagged missing data loads or widget failures within minutes, freeing up leadership time and reducing production support overhead by \textbf{10\%}.}
+      \resumeItem{\textbf{BoM Generator Prototype:} Bootstrapped a \textbf{LangGraph-based agentic Bill of Materials (BoM) generator} capable of decomposing highly complex products into \textbf{1,000s of sub-components} down to raw materials. Added a reflective \textbf{“critique agent”} that iteratively refined outputs, improving accuracy and reducing errors compared to manual annotation.}
+      \resumeItem{\textbf{Recursive Workflow Deployment:} Packaged the BoM generator as a \textbf{Python wheel}, created \textbf{Docker images}, and deployed to internal supply chain test environments on \textbf{AWS Elastic Container Service (ECS)}. Designed a \textbf{recursive LangGraph workflow} that allowed the generator to iteratively expand complex assemblies into sub-components, making the BoM generation process scalable and accurate for \textbf{thousands of parts}.}
     \resumeItemListEnd
 
 
     \resumeSubheading
       {Software Engineer}{May 2023 -- May 2024}
-      {Dell Technologies}{Bengaluru, India}
+      {Dell Technologies}{}
       \resumeItemListStart
       \resumeItem{
-        \textbf{Secured Microservices:} Implemented OAuth2 authentication with JWT in microservices for Quote Deal Planning (QDP), a cloud-native Java application in Dell's digital supply chain, ensuring secure access.
+        \textbf{Secured Microservices:} Redesigned the HTTP security model in \textbf{Java Spring Boot 3} to align with corporate compliance requirements, introducing stricter \textbf{CORS} rules and \textbf{CSRF protections}.
       }
+      \resumeItem{\textbf{Implemented Authentication:} Integrated \textbf{OAuth2 + JWT} across 15+ microservices in the Quote Deal Planning (QDP) platform, eliminating the need for an \textbf{API Gateway server}. Enabled secure direct interaction with microservices, reducing average API response latency by \textbf{18\%} as reported on Dynatrace.}
       \resumeItem{
-        \textbf{Increased DevOps Efficiency:} Strengthened application security by addressing vulnerabilities in Angular and Spring Boot, optimized CI/CD pipelines, and achieving an internal DevOps maturity score of over 90\%.
-        }
+        \textbf{Angular Upgrades:} Led the migration from \textbf{Angular 5} to \textbf{Angular 11}, modernizing UI components for better performance and accessibility. This also helped fix 80+ critical vulnerabilities identified by \textbf{Snyk}, including dependency and XSS issues.}
     \resumeItem{
-        \textbf{Developed a feature-rich frontend} in Angular and React to provide deal planners with critical data, integrating seamlessly with new microservices for real-time insights and improved decision-making.
-    }   
-	
+        \textbf{Improved DevOps and Monitoring:} Achieved \textbf{92\% DevOps maturity score} on Dell’s internal dashboards by optimizing \textbf{CI/CD pipelines} and implementing automated testing gates. Leveraged \textbf{Snyk} for continuous vulnerability scanning and remediation.
+    }
+  
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
 
-  \section{Publication}
-    \resumeSubHeadingListStart
-      \resumeSubheading
-          {\textbf{Journal: Evaluating Conditional handover (CHO) for 5G networks with dynamic obstacles}} {}
-          {\href{https://doi.org/10.1016/j.comcom.2025.108067}{https://doi.org/10.1016/j.comcom.2025.108067}}{}
-          \resumeItemListStart
-            \resumeItem{Proposed and validated a Markov model to evaluate handover performance in 5G systems, focusing on CHO metrics like latency, packet loss, and failure probability using Python-based simulation setup to calculate optimal configuration of mobility parameters. }
-          \resumeItemListEnd
-          
-        \resumeSubHeadingListEnd
 
-%-----------EDUCATION-----------
-\section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {New York University}{New York, USA}
-      {Master of Science in Computer Engineering}{Sep. 2024 -- May 2026}
-    \resumeSubheading
-      {Shiv Nadar University}{Delhi-NCR, India}
-      {Bachelor of Technology in Computer Science and Engineering}{Aug. 2020 -- May 2024}
 
-  \resumeSubHeadingListEnd
+
   
 %-----------PROJECTS-----------
 \section{Projects}
