@@ -23,7 +23,7 @@ jobs:
         with:
           tag_name: latest
           name: Resume PDF
-          files: public/Resume.pdf
+          files: Resume.pdf
           prerelease: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
