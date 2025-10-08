@@ -23,7 +23,7 @@ jobs:
         with:
           tag_name: latest
           name: Resume PDF
-          files: Resume.pdf
+          files: Resume_Megh_Rathod.pdf
           prerelease: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
