@@ -16,7 +16,7 @@ jobs:
         with:
           run: |
             tlmgr install latexmk xetex fontspec babel-english collection-fontsrecommended collection-latexextra rainbowbrackets tablericons tikz-shields tikzbrickfigurines
-            latexmk -pdf -xelatex -interaction=nonstopmode Resume.tex
+            latexmk -pdf -xelatex -interaction=nonstopmode Resume_Megh_Rathod.tex
 
       - name: Upload PDF to GitHub Release (latest)
         uses: softprops/action-gh-release@v2

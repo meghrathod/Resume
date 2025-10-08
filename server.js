@@ -18,7 +18,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Route to proxy the latest resume PDF from GitHub Releases
 app.get('/resume.pdf', async (req, res) => {
-  const pdfUrl = 'https://github.com/meghrathod/Resume/releases/download/latest/Resume.pdf';
+  const pdfUrl = 'https://github.com/meghrathod/Resume/releases/download/latest/Resume_Megh_Rathod.pdf';
   try {
     const response = await fetchFn(pdfUrl, {
       headers: { 'User-Agent': 'Mozilla/5.0 (compatible; ResumeProxy/1.0)' }
