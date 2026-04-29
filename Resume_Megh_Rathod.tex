@@ -11,6 +11,7 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
+\usepackage{fontawesome5}
 % \input{glyphtounicode}
 
 
@@ -109,18 +110,81 @@
     \href{https://github.com/meghrathod}{\underline{github.com/meghrathod}}
 \end{center}
 
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+    {Software Engineer Intern}{Feb. 2026 -- May 2026}
+    {Cyber Health}{}
+    \resumeItemListStart
+      \resumeItem{\textbf{Privacy Automation Pipeline:} Built a \textbf{LangGraph}-powered \textbf{Python} pipeline using \textbf{Playwright MCP} to automatically discover and apply privacy and security settings across 15+ online services, giving users hands-free protection with no manual steps required.}
+      \resumeItem{Developed a cross-platform desktop app in \textbf{TypeScript} and \textbf{Electron} that runs the automation workflows locally, keeping user credentials secure on-device and providing a simple one-click interface.}
+      \resumeItem{Wrote reusable modules covering login flows, settings navigation, and change verification for each supported platform, making it easy to extend coverage to new services.}
+    \resumeItemListEnd
+
+    \resumeSubheading
+    {Software Engineer Intern}{May 2025 -- August 2025}
+    {Exiger}{New York, NY}
+    \resumeItemListStart
+      \resumeItem{\textbf{LLM-Based BoM Generator:} Built an AI agent pipeline using \textbf{LangGraph} and \textbf{LLMs} to automatically generate Bills of Materials (BoM) for complex products. The system breaks products down into \textbf{1,000s of sub-components} using recursive AI workflows, with a review agent that checks and improves outputs for accuracy.}
+      \resumeItem{Built data extraction pipelines and prompt chains to pull structured information from messy supplier and product data, improving output accuracy across different input formats.}
+      \resumeItem{Packaged the system as \textbf{Docker} images and deployed on \textbf{AWS ECS} to process thousands of supply chain records in parallel.}
+          \resumeItemListEnd
+
+
+    \resumeSubheading
+      {Software Engineer}{May 2023 -- May 2024}
+      {Dell Technologies}{}
+      \resumeItemListStart
+      \resumeItem{\textbf{Implemented Authentication:} Integrated \textbf{OAuth2 + JWT} across 15+ microservices in the Quote Deal Planning (QDP) platform, removing the need for a separate API Gateway. This reduced average API response latency by \textbf{18\%} as measured on Dynatrace.}
+      \resumeItem{
+        \textbf{Frontend Development:} Migrated the deprecated frontend from \textbf{Angular 5} to \textbf{Angular 11} and built new quoting workflows in \textbf{React}, improving performance and accessibility while fixing 80+ critical vulnerabilities flagged by \textbf{Snyk}.}
+      \resumeItem{
+        \textbf{Secured Microservices:} Updated the HTTP security setup in \textbf{Java Spring Boot 3} to meet compliance requirements, adding stricter CORS rules and CSRF protections.
+      }
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+
+
+  
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Plant Disease Detection} $|$ \emph{Python, PyTorch, Ray, FastAPI, ONNX, Docker} $|$ \href{https://github.com/meghrathod/plantdisease-ml}{\faGithub}}{}
+          \resumeItemListStart
+            \resumeItem{Fine-tuned a \textbf{ConvNeXt-Small} image classifier using \textbf{Ray} for distributed training, reaching \textbf{67.9\% accuracy across 89 disease classes} to help speed up agricultural insurance claim processing}
+            \resumeItem{Served the model via a \textbf{FastAPI} server using \textbf{ONNX INT8 quantization}, cutting model size by \textbf{71\%} to 57MB while keeping response time under \textbf{150ms} at 8 req/sec}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Sampark} $|$ \emph{React, Node.js, GraphQL $|$ Community Platform}}{}
+          \resumeItemListStart
+            \resumeItem{Built a \textbf{React} web app with a Node.js backend serving 3,000+ community members with real-time updates, image and video sharing for Yogi Divine Society of NJ}
+            \resumeItem{Developed \textbf{GraphQL} schemas for member and event management, donation processing via Stripe, and push notifications using Firebase Cloud Messaging}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+
 %-----------PROGRAMMING SKILLS-----------
 \section{Skills}
 \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
         \begin{tabbing}
         \hspace{2.5cm} \= \hspace{5cm} \= \kill % Set the tab stops
-        \textbf{Languages:} \> Java, Python, Golang, JavaScript, SQL (MySQL, PostgreSQL), GraphQL\\
-        \textbf{Frameworks:} \> Spring Boot, React, Angular, Node.js, React Native, LangGraph, Pytorch, TensorFlow \\
-        \textbf{Tools:} \> AWS, Kubernetes, Docker, Git, Cloud Foundry, Snyk, Dynatrace, Linux
+        \textbf{Languages:} \> Python, TypeScript, Java, Golang, SQL (MySQL, PostgreSQL), GraphQL\\
+        \textbf{Frameworks:} \> PyTorch, TensorFlow, LangGraph, Ray, FastAPI, React, Spring Boot, Node.js, Angular \\
+        \textbf{Tools:} \> AWS, Docker, Kubernetes, MLFlow, Git, Snyk, Dynatrace, Linux
         \end{tabbing}
     }}
 \end{itemize}
+
 
 %-----------EDUCATION-----------
 \section{Education}
@@ -134,64 +198,6 @@
 
   \resumeSubHeadingListEnd
 
-%-----------EXPERIENCE-----------
-\section{Experience}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-    {Software Engineer Intern}{May 2025 -- August 2025}
-    {Exiger}{New York, NY}
-    \resumeItemListStart
-      \resumeItem{\textbf{LLM-Based BoM Generator:} Architected and deployed a production-ready AI agentic system using \textbf{LangGraph} and \textbf{LLMs} for automated Bill of Materials (BoM) generation. The system decomposes complex products into \textbf{1,000s of sub-components} using recursive AI workflows, featuring a reflective critique agent that iteratively refines outputs for enhanced accuracy.}
-      \resumeItem{Developed comprehensive prompts for the AI workflows to ensure accurate and consistent BoM generation.}
-      \resumeItem{Packaged as \textbf{Docker containers} and deployed on \textbf{AWS ECS} for scalable processing of thousands of parts.}
-      \resumeItem{\textbf{Automated Dashboard Validation:} Developed intelligent test suites in \textbf{TypeScript} leveraging Playwright to monitor and validate Exiger's DDIQ Analytics dashboards. Implemented automated anomaly detection that flagged missing data loads or widget failures within minutes, eliminating a daily \textbf{30-minute manual validation task} and reducing production support overhead by \textbf{10\%}.}
-          \resumeItemListEnd
-
-
-    \resumeSubheading
-      {Software Engineer}{May 2023 -- May 2024}
-      {Dell Technologies}{}
-      \resumeItemListStart
-      \resumeItem{
-        \textbf{Secured Microservices:} Redesigned the HTTP security model in \textbf{Java Spring Boot 3} to align with corporate compliance requirements, introducing stricter CORS rules and CSRF protections.
-      }
-      \resumeItem{\textbf{Implemented Authentication:} Integrated \textbf{OAuth2 + JWT} across 15+ microservices in the Quote Deal Planning (QDP) platform, eliminating the need for an API Gateway server. Enabled secure direct interaction with microservices, reducing average API response latency by \textbf{18\%} as reported on Dynatrace.}
-      \resumeItem{
-        \textbf{Angular Upgrades:} Performed migration from \textbf{Angular 5} to \textbf{Angular 11}, modernizing UI components for better performance and accessibility. This also helped fix 80+ critical vulnerabilities identified by \textbf{Snyk}, including dependency conflict issues.}
-    \resumeItem{
-        \textbf{Improved DevOps and Monitoring:} Achieved \textbf{92\% DevOps maturity score} on Dell's internal dashboards by optimizing CI/CD pipelines and implementing automated testing gates. Leveraged \textbf{Snyk} for continuous vulnerability scanning and remediation.
-    }
-  
-      \resumeItemListEnd
-
-  \resumeSubHeadingListEnd
-
-
-
-
-  
-%-----------PROJECTS-----------
-\section{Projects}
-    \resumeSubHeadingListStart
-      \resumeProjectHeading
-          {\textbf{Sambandh} $|$ \emph{React Native, Node.js, GraphQL $|$ Community Platform | \href{https://apps.apple.com/us/app/hp-sambandh/id1409442640}{apps.apple.com/us/app/hp-sambandh/id1409442640}}}{}
-          \resumeItemListStart
-            \resumeItem{Collaborated on a \textbf{React Native mobile app} with Node.js backend, serving 3000+ community members with real-time updates and image and video sharing for Yogi Divine Society of NJ.}
-            \resumeItem{Implemented \textbf{JWT-based authentication} with role-based access control, secure file uploads, and encrypted data storage using bcrypt and AES-256}
-            \resumeItem{Developed \textbf{GraphQL schema} for event management, donation processing with Stripe integration, and push notifications using Firebase Cloud Messaging}
-          \resumeItemListEnd
-
-      \resumeProjectHeading
-          {\textbf{Kabootar} $|$ \emph{React, TypeScript, Golang, Docker $|$ Peer-to-Peer File Sharing | \href{https://kabootar.meghrathod.dev/}{kabootar.meghrathod.dev}}}{}
-          \resumeItemListStart
-            \resumeItem{Developed a \textbf{peer-to-peer file sharing web app (PWA) using React and WebRTC}, enabling direct file transfers without server storage, reaching 200+ monthly active users in the university community}
-            \resumeItem{ Created a lightweight \textbf{signaling server in Golang using WebSockets} to handle peer discovery and connection management, resulting in reliable peer-to-peer file sharing between users}
-            
-          \resumeItemListEnd
-    \resumeSubHeadingListEnd
-
-
-%-------------------------------------------
 
 
 \end{document}
